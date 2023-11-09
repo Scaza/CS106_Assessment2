@@ -3,9 +3,24 @@
 
 #include <iostream>
 
+class incident_category {
+   
+
+};
+
+class tickets {
+    private:
+        int ticket_number;
+
+    
+
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    
+
+    return 0;
 }
 
 
