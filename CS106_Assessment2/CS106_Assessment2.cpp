@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
-
+#include <string>
 class incident_category {
-   
+   private:
+    std::string name;
 
+public:
+    incident_category(const std::string& categoryName):name(categoryName){}
+std::string getName()const {
+return name;
+}
 };
 
 class tickets {
