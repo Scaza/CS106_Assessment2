@@ -3,23 +3,50 @@
 
 #include <iostream>
 #include <string>
-class incident_category {
-   private:
-    std::string name;
+#include <vector>
 
-public:
-    incident_category(const std::string& categoryName):name(categoryName){}
-std::string getName()const {
-return name;
-}
+using namespace std;
+
+enum Damaged {                                                                       //Simple enum that allows the user to indicate whether or not the damage is software/Hardware related
+
+    SOFTWARE,
+    HARDWARE,
+    BOTH
+};
+
+class incident_category {
+    private:
+        string details;
+        Damaged device_part;
+    public:
+    
+        incident_category(string categoryName, Damaged user_inputted_device_part) {
+            details = categoryName;
+            
+        }
+    
+        const string getName (){
+            return details;
+        }
 };
 
 class tickets {
     private:
-        int ticket_number;
+       string name;
+       int ticket_number;
+       incident_category user_input;
+       bool solved;
+};
 
+class user {                                                                        //class that will store user information and all related inf
+private:
     
+    string name;
+    string password;
+    vector<tickets> tickets;
 
+public:
+    
 };
 
 int main()
