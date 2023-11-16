@@ -14,7 +14,7 @@ enum Damaged {                                                                  
     BOTH
 };
 
-class incident_category {
+class incident_category {                                                                                           //Inceident category to describe broken features of the iphone
     private:
         string details;
         Damaged device_part;
@@ -30,27 +30,70 @@ class incident_category {
         }
 };
 
-class tickets {
-    private:
-       string name;
-       int ticket_number;
-       incident_category user_input;
-       bool solved;
+class Ticket{                                                                                               //Ticket with appropriate asssociated details as specified within the brief
+private:
+    string name;
+    int ticket_number;
+    incident_category user_input;
+        bool solved;
+public:
+
+    string getName() {                                                                                      //Get name
+        return name;
+    }
+
+    int getNumber() {                                                                                        //Get number
+        return ticket_number;
+    }
+
+    bool isSolved() {
+        return solved;
+    }
+
+
 };
 
-class user {                                                                        //class that will store user information and all related inf
+class User {                                                                        //class that will store user information and all related inf
 private:
     
     string name;
     string password;
-    vector<tickets> tickets;
+    vector<Ticket> tickets;
 
 public:
-    
-};
+    User(string userName, string userPassword)
+        :name(userName), password(userPassword)
+    {
+        cout << "User Created: " << name << endl;
+    }
+    void addTicket(Ticket ticket) {
+        tickets.push_back(ticket);
+        cout << "Ticket Added: " << ticket.getName() << " to user: " << name << endl;
+    }
+    void showTickets() {                                                                                            //method of displaying all 
+        cout << "Displaying Tickets for user: " << name << endl;
+
+        for (Ticket ticket : tickets) {
+            cout << "Ticket Name: " << ticket.getName()
+                << ", Ticket Number: " << ticket.getNumber()
+                << ", Ticket Status: " << (ticket.isSolved() ? "Solved" : "Unsolved")
+                << endl;
+        }
+
+ }
+
+
 
 int main()
 {
+    bool run = true;
+
+    while (run) {
+    
+        cout << "Welcome to the phone repair helpdesk!"
+    
+    
+    }
     
 
     return 0;
