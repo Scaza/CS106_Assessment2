@@ -55,7 +55,7 @@ public:
 
 class User {                                                                        //class that will store user information and all related inf
 private:
-    
+
     string name;
     string password;
     vector<Ticket> tickets;
@@ -80,49 +80,50 @@ public:
                 << endl;
         }
 
- }
-
-
-
-int main()
-{
-
-    vector<User> Users;                                                                                                          //Intialising a vector of user class so that accounts can be stored with their information and edited as required
-    bool run = true;
-
-    while (run) {                                                                                                                                           //Outer most while loop that will control the number of iterations that the program runs for.
-    
-        cout << "Welcome to the phone repair helpdesk!" << endl;
-        cout << "In order to get started please select an account to log into or create an account to use! " << endl;
-        cout << "***************************************************************************************** " << '\n' << endl;
-
-        cout << "Would you like to: " <<  '\n' << endl;
-        cout << "1.Create an account" << endl;
-        cout << "2.Log into an existing account" << endl;
-        cout << "3.Exit" << '\n' << endl;
-
-        int user_input;
-
-        while (!(cin >> user_input) || user_input != 1 && user_input != 2 && user_input !=3) {
-            cin.clear();
-            cin.ignore(123, '\n');
-            cout << "Please input a valid input from the options selection! " << '\n' << endl;
-        }
-
-        if(user_input == 1){
-          
-        }
-        else if (user_input == 2){
-
-        }
-        else if (user_input == 3){
-        
-        }
-
-    
-    
     }
-    return 0;
-}
+
+
+
+    int main()
+    {
+
+        vector<User> Users;                                                                                                          //Intialising a vector of user class so that accounts can be stored with their information and edited as required
+        bool run = true;
+
+        while (run) {                                                                                                                                           //Outer most while loop that will control the number of iterations that the program runs for.
+
+            cout << "Welcome to the phone repair helpdesk!" << endl;
+            cout << "In order to get started please select an account to log into or create an account to use! " << endl;
+            cout << "***************************************************************************************** " << '\n' << endl;
+
+            cout << "Would you like to: " << '\n' << endl;
+            cout << "1.Create an account" << endl;
+            cout << "2.Log into an existing account" << endl;
+            cout << "3.Exit" << '\n' << endl;
+
+            int user_input;
+
+            while (!(cin >> user_input) || user_input != 1 && user_input != 2 && user_input != 3) {
+                cin.clear();
+                cin.ignore(123, '\n');
+                cout << "Please input a valid input from the options selection! " << '\n' << endl;
+            }
+
+            if (user_input == 1) {
+
+            }
+            else if (user_input == 2) {
+
+            }
+            else if (user_input == 3) {
+
+            }
+
+
+
+        }
+
+        return 0;
+    }
 
 
