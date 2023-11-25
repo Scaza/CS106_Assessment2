@@ -78,7 +78,8 @@ public:
         cout << "Ticket Added: " << ticket.getName() << " to user: " << name << endl;
     }
    virtual void showTickets() {                                                                                            //method of displaying all 
-        cout << "Displaying Tickets for user: " << name << endl;
+        
+       cout << "Displaying Tickets for user: " << name << endl;
 
         for (Ticket ticket : tickets) {
             cout << "Ticket Name: " << ticket.getName()
@@ -214,6 +215,7 @@ int main()
             
 
             while (isLoggedIn) {
+                
                 cout << "\n======= MENU =======";
                 cout << "\n1. Show my Tickets";
                 cout << "\n2. Add a Ticket";
@@ -235,7 +237,9 @@ int main()
                     bool solved;
 
                     cout << "Enter ticket name: ";
-                    cin >> ticketName;
+                    cin.clear();
+                    cin.ignore(123, '\n');
+                    getline(cin, ticketName);
                     cout << "Enter ticket number: ";
                     cin >> ticketNum;
                     cout << "Choose incident category: 1 for SOFTWARE, 2 for HARDWARE, 3 for BOTH: ";
